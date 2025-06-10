@@ -325,7 +325,7 @@ form button[type="submit"]:hover {
 .rodape::after {
   
 /* Define o conteúdo de texto que será exibido no rodapé */
-  content: "©2025 Desenvolvido por alunos do Ceti Dona Rosaura Muniz Barreto, sob orientação do Professor Francisco Alves.";
+  content: "©2025 Desenvolvido por alunos do Ceti Dona Rosaura Muniz Barreto.";
   
 /* Faz com que o conteúdo seja exibido como um bloco, ocupando toda a largura disponível */
   display: block;
@@ -343,7 +343,7 @@ form button[type="submit"]:hover {
   text-align: center;
 
 /* Adiciona um espaçamento interno (padding) de 10px no topo e embaixo, e 0 nas laterais */
-  padding: 10px 0;
+  padding: 20px 0;
 
   /* Faz o rodapé ocupar 100% da largura da tela */
   width: 100%;
