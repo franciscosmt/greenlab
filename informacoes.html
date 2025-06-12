@@ -7,30 +7,36 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Barra de navegação padrão -->
   <nav class="navbar">
-  <h2>🌿 GreenLab 🌿</h2>
-  <button class="menu-toggle">☰</button>
-  <ul class="menu">
-    <li><a href="index.html" class="active">Início</a></li>
-    <li><a href="informacoes.html">Informações</a></li>
-    <li><a href="contato.html">Contato</a></li>
-    <li><a href="equipe.html">Equipe de Projeto</a></li>
-  </ul>
-</nav>
+    <h2><a href="index.html" class="logo">🌿 GreenLab 🌿</a></h2>
+    <button class="menu-toggle">☰</button>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="informacoes.html" class="active">Informações</a></li>
+      <li><a href="equipe.html">Equipe de Projeto</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
 
-
-  <main class="container">
-    <h1>Informações da Horta Automatizada</h1>
-    <p> Este sistema realiza o monitoramento inteligente da sua horta, acompanhando em tempo real três variáveis essenciais para o cultivo saudável e sustentável:</p>
-    <p>🌱 Umidade do Solo: Monitoramento constante da umidade garante que as plantas recebam a quantidade ideal de água, evitando tanto o ressecamento quanto o excesso de irrigação, que pode prejudicar as raízes.</p>
-    <p>🌡️ Temperatura Ambiente: A leitura da temperatura permite identificar condições extremas de calor ou frio, ajudando na tomada de decisões, como proteção térmica ou alteração na frequência de irrigação.</p>
-    <p>☀️ Luminosidade: A intensidade da luz solar é medida para garantir que as plantas recebam iluminação adequada para a fotossíntese, essencial para o crescimento saudável.</p>
-    <p>Sensores integrados enviam esses dados em tempo real para o sistema, que pode acionar a irrigação automaticamente com base nos níveis detectados ou permitir controle manual pelo usuário.</p>
-    <p>A automação promove economia de água, melhora o desempenho das plantas e contribui para um cultivo mais inteligente, sustentável e eficiente.</p>
+  <!-- Conteúdo principal -->
+  <main class="container-full">
+    <h1>Sobre o Sistema</h1>
+    
+    <!-- Texto explicativo sobre o funcionamento da horta -->
+    <section>
+      <p> Este sistema realiza o monitoramento inteligente da sua horta, acompanhando em tempo real três variáveis essenciais para o cultivo saudável e sustentável:</p><br>
+      <p>🌱 Umidade do Solo: Monitoramento constante da umidade garante que as plantas recebam a quantidade ideal de água, evitando tanto o ressecamento quanto o excesso de irrigação, que pode prejudicar as raízes.</p><br>
+      <p>🌡️ Temperatura Ambiente: A leitura da temperatura permite identificar condições extremas de calor ou frio, ajudando na tomada de decisões, como proteção térmica ou alteração na frequência de irrigação.</p><br>
+      <p>☀️ Luminosidade: A intensidade da luz solar é medida para garantir que as plantas recebam iluminação adequada para a fotossíntese, essencial para o crescimento saudável.</p><br>
+      <p>Sensores integrados enviam esses dados em tempo real para o sistema, que pode acionar a irrigação automaticamente com base nos níveis detectados ou permitir controle manual pelo usuário.</p><br>
+      <p>A automação promove economia de água, melhora o desempenho das plantas e contribui para um cultivo mais inteligente, sustentável e eficiente.</p>
+    </section>
   </main>
 
+  <!-- Rodapé -->
   <footer class="rodape"></footer>
-  
-  <script src="js/script.js"></script>
+    <!-- Script JavaScript com a lógica do projeto (acesso ao Firebase, controle dos sensores e irrigação) -->
+  <script src="js/script1.js"></script>
 </body>
 </html>
