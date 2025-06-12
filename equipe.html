@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equipe de Projeto | Horta Automatizada</title>
+  <title>Equipe | Horta Automatizada</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Barra de navegação principal -->
   <nav class="navbar">
-  <h2>🌿 GreenLab 🌿</h2>
-  <button class="menu-toggle">☰</button>
-  <ul class="menu">
-    <li><a href="index.html" class="active">Início</a></li>
-    <li><a href="informacoes.html">Informações</a></li>
-    <li><a href="contato.html">Contato</a></li>
-    <li><a href="equipe.html">Equipe de Projeto</a></li>
-  </ul>
-</nav>
+    <h2><a href="index.html" class="logo">🌿 GreenLab 🌿</a></h2>
+    <button class="menu-toggle">☰</button>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="informacoes.html">Informações</a></li>
+      <li><a href="equipe.html" class="active">Equipe de Projeto</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
 
-
+  <!-- Conteúdo principal da página -->
   <main class="container">
-    <h1>Equipe de Projeto</h1>
-    <section class="team">
+    <h1>Equipe de Desenvolvimento</h1>
+
+    <!-- Seção com os membros da equipe usando layout horizontal -->
+    <section class="equipe">
+
+      <!-- Cada membro é exibido com imagem e descrição -->
       <div class="card-horizontal">
         <img src="img/ana.jpg" alt="Foto de Ana Vitória" />
         <div class="info">
@@ -69,11 +74,14 @@
           <p>Orientador do projeto e suporte técnico geral.</p>
         </div>
       </div>
+
     </section>
   </main>
 
+  <!-- Rodapé padrão -->
   <footer class="rodape"></footer>
   
-  <script src="js/script.js"></script>
+    <!-- Script JavaScript com a lógica do projeto (acesso ao Firebase, controle dos sensores e irrigação) -->
+  <script src="js/script1.js"></script>
 </body>
 </html>
