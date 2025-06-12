@@ -1,334 +1,241 @@
-/* ========================= */
-/*        RESET BÁSICO       */
-/* ========================= */
+/* BASE DO CORPO DA PÁGINA   */
+/* === RESET E CONFIGURAÇÕES BASE === */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; /* Remove todas as margens padrão dos elementos */
+  padding: 0; /* Remove todos os preenchimentos padrão */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho do elemento */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define uma fonte padrão moderna */
 }
 
 body {
-  background-color: #e8f5e9;
-  color: #1b5e20;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: #e8f5e9; /* Cor de fundo clara esverdeada */
+  color: #2e7d32; /* Cor padrão do texto (verde escuro) */
+  min-height: 100vh; /* Garante que a altura mínima seja igual à altura da tela */
+  display: flex; /* Define como um container flexível */
+  flex-direction: column; /* Alinha os filhos verticalmente */
+  padding-bottom: 60px; /* Espaço no final para o rodapé fixo */
 }
 
-/* ========================= */
-/*       BARRA DE NAVEGAÇÃO  */
-/* ========================= */
+/* === LOGO DA PAGINA COM LINK === */
+.logo {
+  color: white;             /* Mantém a cor do texto como branco */
+  text-decoration: none;      /* Remove o sublinhado */
+}
+
+/* === NAVBAR (CABEÇALHO) === */
 .navbar {
-  background-color: #2e7d32;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.navbar h2 {
-  font-weight: 700;
-  font-size: 1.5rem;
+  background-color: #2e7d32; /* Cor de fundo verde escuro */
+  color: white; /* Cor do texto */
+  padding: 1rem; /* Espaçamento interno */
+  display: flex; /* Usa flexbox para alinhar os elementos */
+  justify-content: space-between; /* Espaça os itens ao máximo */
+  align-items: center; /* Centraliza verticalmente */
 }
 
 .menu {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  display: flex; /* Alinha os itens em linha */
+  list-style: none; /* Remove os marcadores de lista */
+  gap: 1rem; /* Espaço entre os itens */
 }
 
-.menu li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+.menu a {
+  color: white; /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: bold; /* Deixa o texto em negrito */
 }
 
-.menu li a:hover,
-.menu li a.active {
-  background-color: #1b5e20;
-}
-
-/* ========================= */
-/*      CONTEÚDO PRINCIPAL   */
-/* ========================= */
-.container {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  flex-grow: 1;
-  padding-bottom: 100px; /* Evita sobreposição com o rodapé */
-}
-
-.container p {
-  text-align: justify;
-  font-size: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
-}
-
-h1 {
-  margin-bottom: 1.5rem;
-  font-size: 2.2rem;
-  text-align: center;
-}
-
-/* ========================= */
-/*         SENSORES          */
-/* ========================= */
-.sensors {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.card {
-  background-color: #a5d6a7;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  flex: 1 1 28%;
-  min-width: 160px;
-  box-shadow: 0 2px 5px rgba(27, 94, 32, 0.3);
-  text-align: center;
-}
-
-.card h2 {
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-/* ========================= */
-/*         IRRIGAÇÃO         */
-/* ========================= */
-.irrigation {
-  text-align: center;
-  margin-bottom: 6rem; /* Afastamento do botão até o rodapé */
-}
-
-.irrigation h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-
-#status {
-  font-weight: 700;
-  color: #388e3c;
-}
-
-button#toggle {
-  background-color: #388e3c;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button#toggle:hover {
-  background-color: #2e7d32;
-}
-
-/* ========================= */
-/*        FORMULÁRIO         */
-/* ========================= */
-form {
-  background-color: #a5d6a7;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(27, 94, 32, 0.3);
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-form label {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  color: #1b5e20;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form select,
-form textarea {
-  padding: 0.6rem 0.8rem;
-  border: 1.5px solid #388e3c;
-  border-radius: 6px;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-form textarea {
-  min-height: 100px;
-}
-
-form button[type="submit"] {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  align-self: center;
-  width: 150px;
-}
-
-form button[type="submit"]:hover {
-  background-color: #1b5e20;
-}
-
-/* ========================= */
-/*           EQUIPE          */
-/* ========================= */
-.card-horizontal {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin: 0 auto 1.5rem auto;
-  max-width: 600px;
-  transition: transform 0.3s ease;
-}
-
-.card-horizontal:hover {
-  transform: scale(1.02);
-}
-
-.card-horizontal img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 1.5rem;
-  border: 3px solid #a1c99a;
-}
-
-.card-horizontal .info h2 {
-  margin: 0 0 0.3rem;
-  font-size: 1.25rem;
-}
-
-.card-horizontal .info p {
-  margin: 0;
-  font-size: 1rem;
-  color: #444;
-}
-
-/* ========================= */
-/*       RESPONSIVIDADE      */
-/* ========================= */
-@media (max-width: 768px) {
-  .sensors {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .card {
-    flex: 1 1 100%;
-  }
-
-  .menu {
-    width: 100%;
-    justify-content: center;
-    margin-top: 0.5rem;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  button#toggle,
-  form button[type="submit"] {
-    width: 100%;
-  }
-
-  form {
-    padding: 1rem;
-  }
-}
-
-/* ========================= */
-/*     MENU RESPONSIVO       */
-/* ========================= */
+/* === BOTÃO DE MENU PARA MOBILE === */
 .menu-toggle {
-  display: none;
+  display: none; /* Esconde por padrão (só aparece no mobile) */
   background: none;
   border: none;
   font-size: 2rem;
   color: white;
-  cursor: pointer;
+  cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
 }
 
-.menu {
-  display: flex;
+/* === CONTAINER GERAL === */
+.container {
+  padding: 2rem; /* Espaçamento interno */
+  max-width: 900px; /* Largura máxima da área de conteúdo */
+  margin: 0 auto; /* Centraliza horizontalmente */
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 0.5rem;
-    gap: 1rem;
-  }
-
-  .menu.active {
-    display: flex;
-    background-color: #a5d6a7;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .navbar {
-    flex-direction: row;
-    align-items: center;
-  }
+/* === CONTAINER-FULL === */
+.container-full {
+  padding: 2rem; /* Adiciona espaçamento interno de 2rem em todos os lados do container */
+  width: 100%; /* Faz o container ocupar toda a largura disponível */
+  max-width: none; /* Remove qualquer limite máximo de largura */
+  margin: 0; /* Remove margens externas (superior, inferior, laterais) */
+  font-size: 18px; /* Define o tamanho da fonte como 16 pixels, ideal para leitura confortável */
+  line-height: 1.5; /* Define a altura das linhas em 1.5 vezes o tamanho da fonte, melhorando a legibilidade */
+  text-align: justify; /* Justifica o texto, alinhando as margens esquerda e direita */
+  margin-bottom: 1rem; /* Adiciona espaço de 1rem abaixo do container (pode separar de outros elementos) */
 }
 
-/* ========================= */
-/*          RODAPÉ           */
-/* ========================= */
+/* === TÍTULOS === */
+h1 {
+  text-align: center; /* Centraliza o título */
+  color: #2e7d32; /* Cor verde escuro */
+}
+
+/* === CARDS DE SENSORES === */
+.sensors {
+  display: flex; /* Alinha os cartões lado a lado */
+  justify-content: space-around; /* Distribui com espaçamento uniforme */
+  flex-wrap: wrap; /* Quebra linha em telas pequenas */
+  margin-top: 2rem; /* Espaço superior */
+}
+
+.card {
+  background: white; /* Define o fundo do cartão como branco */
+  border-radius: 10px; /* Arredonda os cantos do cartão com raio de 10px */
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2); /* Aplica uma sombra suave com tom esverdeado */
+  padding: 1.5rem; /* Espaçamento interno (em todos os lados) de 1.5rem */
+  text-align: center; /* Centraliza o texto dentro do cartão */
+  width: 200px; /* Define uma largura fixa de 200 pixels para o cartão */
+  margin: 1rem; /* Espaçamento externo de 1rem em todos os lados */
+}
+
+/* === SEÇÃO DE IRRIGAÇÃO === */
+.irrigation {
+  text-align: center;           /* Centraliza o conteúdo */
+  margin-top: 2rem;             /* Espaço acima da seção */
+  font-size: 1.2rem;            /* Tamanho da fonte */
+}
+
+#toggle {
+  background-color: #2e7d32;    /* Fundo verde escuro */
+  color: white;                 /* Texto branco */
+  padding: 0.8rem 2rem;         /* Espaçamento interno */
+  border: none;                 /* Sem borda */
+  border-radius: 10px;          /* Bordas arredondadas */
+  font-size: 1rem;              /* Tamanho do texto */
+  cursor: pointer;              /* Cursor de mãozinha ao passar o mouse */
+  transition: background 0.3s ease; /* Transição suave na mudança de fundo */
+  margin-top: 1rem;             /* Espaço superior */
+}
+
+/* === EFEITO AO PASSAR O MOUSE === */
+#toggle:hover {
+  background-color: #07580b;    /* Tom de verde um pouco mais escuro ao passar o mouse */
+}
+
+/* === ANIMAÇÃO PARA QUANDO A IRRIGAÇÃO ESTIVER ATIVA === */
+@keyframes piscar-vermelho {
+  0%, 100% { color: red; } /* Vermelho visível */
+  50% { color: transparent; } /* Desaparece no meio da animação */
+}
+
+.irrigacao-ligada {
+  animation: piscar-vermelho 2s infinite; /* Aplica a animação chamada 'piscar-vermelho' com duração de 2 segundos, repetindo indefinidamente */
+  font-weight: bold;                     /* Deixa o texto em negrito para dar mais destaque */
+}
+
+/* === CARDS HORIZONTAIS DA EQUIPE === */
+.card-horizontal {
+  display: flex;                        /* Usa layout flexível para alinhar imagem e texto lado a lado */
+  background: white;                    /* Fundo branco para o card */
+  border-radius: 10px;                  /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2); /* Sombra suave com tom de verde para profundidade */
+  margin: 1rem 0;                       /* Margem vertical de 1rem para separar os cards */
+  align-items: center;                 /* Alinha verticalmente os itens ao centro */
+  padding: 1rem;                        /* Espaçamento interno */
+}
+
+.card-horizontal img {
+  width: 100px;                        /* Largura da imagem */
+  height: 100px;                       /* Altura da imagem */
+  object-fit: cover;                   /* Garante que a imagem cubra toda a área sem distorção */
+  border-radius: 50%;                  /* Torna a imagem circular */
+  border: 3px solid #2e7d32;         /* Adiciona uma borda verde ao redor da imagem */
+  margin-right: 1rem;                  /* Espaço à direita da imagem para separar do texto */
+}
+
+.card-horizontal .info {
+  padding-left: 0.5rem;                /* Espaçamento à esquerda do conteúdo de texto (opcional para alinhamento) */
+}
+
+.card-horizontal h2 {
+  margin-bottom: 0.5rem;               /* Espaço abaixo do nome */
+  color: #2e7d32;                    /* Cor verde-escura para o título */
+}
+
+.card-horizontal p {
+  margin: 0;                           /* Remove margens padrão do parágrafo */
+  color: #333;                       /* Cor de texto mais escura para melhor legibilidade */
+}
+
+/* === ESTILO DO FORMULÁRIO DE CONTATO === */
+form {
+  display: flex;                      /* Usa Flexbox para organizar os elementos */
+  flex-direction: column;             /* Organiza os elementos em coluna (um abaixo do outro) */
+  gap: 1rem;                          /* Espaçamento vertical de 1rem entre os campos */
+  margin-top: 2rem;                   /* Espaço acima do formulário */
+}
+
+form input,
+form select,
+form textarea {
+  padding: 0.8rem;                    /* Espaçamento interno nos campos */
+  border-radius: 8px;                 /* Bordas arredondadas nos campos */
+  border: 1px solid #ccc;           /* Borda cinza clara */
+  font-size: 1rem;                    /* Tamanho da fonte dos campos */
+  width: 100%;                        /* Os campos ocupam toda a largura disponível */
+}
+
+form button {
+  background-color: #2e7d32;        /* Cor de fundo verde escuro */
+  color: white;                     /* Cor do texto branca */
+  border: none;                       /* Remove a borda padrão */
+  border-radius: 10px;                /* Bordas arredondadas para o botão */
+  padding: 0.8rem;                    /* Espaçamento interno do botão */
+  font-size: 1rem;                    /* Tamanho da fonte do botão */
+  cursor: pointer;                    /* Mostra o cursor de "mãozinha" ao passar por cima */
+  transition: background 0.3s ease;   /* Transição suave da cor de fundo ao interagir */
+}
+
+form button:hover {
+  background-color: #2e7d32;        /* Cor de fundo um pouco mais escura ao passar o mouse */
+}
+
+/* === RODAPÉ FIXO NO FINAL DA PÁGINA === */
 .rodape::after {
   content: "©2025 Desenvolvido por alunos do Ceti Dona Rosaura Muniz Barreto, sob orientação do Professor Francisco Alves.";
-  display: block;
-  background-color: #2a7f2a;
-  font-size: 18px;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: 1000;
+  /* Insere esse texto automaticamente após o conteúdo do elemento com a classe .rodape */
+  text-align: center;                /* Centraliza o texto horizontalmente */
+  background-color: #2e7d32;       /* Define o fundo como verde escuro */
+  color: white;                    /* Define a cor do texto como branco */
+  font-size: 18px;                   /* Define o tamanho da fonte em 18 pixels */
+  padding: 10px 0;                   /* Adiciona espaçamento vertical (em cima e embaixo) de 10px */
+  display: block;                    /* Faz o conteúdo se comportar como um bloco */
+  position: fixed;                   /* Fixa o rodapé na parte inferior da tela, mesmo ao rolar a página */
+  width: 100%;                       /* O rodapé ocupa toda a largura da tela */
+  bottom: 0;                         /* Posiciona o rodapé exatamente na parte inferior da janela */
+  z-index: 1000;                     /* Garante que o rodapé fique acima de outros elementos na tela */
+}
+
+/* === RESPONSIVIDADE PARA TELAS MENORES === */
+@media (max-width: 768px) {
+  /* Aplica estas regras apenas quando a largura da tela for de até 768px (como em tablets e celulares) */
+  .menu {
+    display: none;                  /* Esconde o menu por padrão em telas pequenas */
+    flex-direction: column;         /* Quando exibido, organiza os itens do menu em coluna */
+    background-color: #2e7d32;    /* Cor de fundo do menu (verde escuro) */
+    position: absolute;             /* Permite posicionar o menu de forma independente */
+    top: 60px;                      /* Distância do topo da tela (abaixo da navbar) */
+    right: 0;                    /* Posiciona o menu a 10px da borda direita */
+    width: 200px;                   /* Define a largura do menu */
+    border-radius: 5px;            /* Bordas arredondadas para o menu */
+    padding: 1rem;                  /* Espaçamento interno */
+    }
+  .menu.show {
+    display: flex;                  /* Exibe o menu quando a classe 'show' é adicionada via JavaScript */
+  }
+  .menu li {
+    margin: 1rem 0;                 /* Espaçamento vertical entre os itens do menu */
+  }
+  .menu-toggle {
+    display: block;                 /* Exibe o botão de menu (hambúrguer ☰) apenas em telas pequenas */
+  }
 }
