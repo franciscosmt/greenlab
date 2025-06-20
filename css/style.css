@@ -152,6 +152,7 @@ form button {
   background-color: var(--cor-verde-escuro);
   color: var(--cor-branco);
   border: none;
+  margin-top: 20px;
   border-radius: 10px;
   padding: 0.8rem;
   font-size: 1rem;
