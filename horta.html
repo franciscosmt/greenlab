@@ -1,0 +1,81 @@
+<!-- Estrutura básica do HTML e link com o CSS -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenLab | Horta Automatizada</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Menu de Navegação -->
+   <nav class="navbar">
+    <h2><a href="index.html" class="logo">🌿 GreenLab 🌿</a></h2>
+    <button class="menu-toggle">☰</button>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">Informações</a>
+        <ul class="submenu">
+          <li><a href="horta.html">Sobre a Horta</a></li>
+          <li><a href="sistema.html">Sobre o Sistema</a></li>
+          <li><a href="formulario.html">Formulário de Cadastro</a></li>
+          <li><a href="pessoas.html">Pessoas Envolvidas</a></li> 
+        </ul>
+      </li>
+      <li><a href="equipe.html">Equipe de Projeto</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+   <main class="container-full">
+  <h1>Sobre a Horta</h1>
+
+  <figure class="img-container">
+    <img src="img/horta1.jpg" alt="Horta automatizada" class="img-horta"/>
+    <figcaption>
+      Horta automatizada em fase inicial no CETI Dona Rosaura Muniz Barreto.<br />
+      <small>Fonte: Arquivo IA realizado pela equipe do Projeto GreenLab</small>
+    </figcaption>
+  </figure>
+
+  <p>
+    O projeto da Horta Automatizada será inicialmente implantado no CETI Dona Rosaura Muniz Barreto, com o objetivo de promover a integração entre 
+    tecnologia, sustentabilidade e produção de alimentos saudáveis. A iniciativa proporciona aos alunos 
+    uma experiência prática com automação e monitoramento remoto, por meio de sensores e controle inteligente da irrigação.
+  </p>
+
+  <p>
+    Um dos diferenciais do projeto está em sua capacidade de expansão. A proposta é que ele seja 
+    adaptado e replicado em outras escolas públicas e também junto aos agricultores familiares da região, 
+    aproveitando o fato de que todas as comunidades locais já possuem acesso à internet.
+  </p>
+
+  <p>
+    <i class="fas fa-wifi"></i> Graças à automação e ao sistema de controle remoto, o manejo da horta pode ser feito a distância, 
+    com baixo custo de implementação. Isso facilita o uso em áreas rurais e promove a inclusão digital no campo.
+  </p>
+
+  <p>
+    <i class="fas fa-tint"></i> Além dos benefícios educacionais e produtivos, o sistema permite o uso racional da água, 
+    evitando desperdícios e promovendo práticas agrícolas mais sustentáveis. A tecnologia também serve como ferramenta de 
+    apoio ao ensino interdisciplinar, envolvendo conteúdos de Ciências, Geografia, Matemática e Tecnologia.
+  </p>
+
+  <p>
+    Por fim, a Horta Automatizada representa uma oportunidade concreta de transformação 
+    social e ambiental. Ao capacitar jovens e agricultores com o uso de tecnologias simples e eficazes, o projeto fortalece 
+    a autonomia das comunidades, incentiva a inovação no campo e contribui para a segurança alimentar regional.
+  </p>
+</main>
+
+  <!-- Rodapé -->
+  <footer class="rodape"></footer>
+
+  <!-- Scripts -->
+  <script src="js/script1.js"></script>
+</body>
+</html>

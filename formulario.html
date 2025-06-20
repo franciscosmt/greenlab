@@ -1,0 +1,78 @@
+<!-- Estrutura básica do HTML e link com o CSS -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenLab | Horta Automatizada</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Menu de Navegação -->
+   <nav class="navbar">
+    <h2><a href="index.html" class="logo">🌿 GreenLab 🌿</a></h2>
+    <button class="menu-toggle">☰</button>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">Informações</a>
+        <ul class="submenu">
+          <li><a href="horta.html">Sobre a Horta</a></li>
+          <li><a href="sistema.html">Sobre o Sistema</a></li>
+          <li><a href="formulario.html">Formulário de Cadastro</a></li>
+          <li><a href="pessoas.html">Pessoas Envolvidas</a></li> 
+        </ul>
+      </li>
+      <li><a href="equipe.html">Equipe de Projeto</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+<main class="container">
+  <h1>Formulário de Cadastro</h1>
+  <form id="contatoForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="genero">Gênero:</label>
+    <select id="genero" name="genero" required>
+      <option value="">Selecione</option>
+      <option value="Masculino">Masculino</option>
+      <option value="Feminino">Feminino</option>
+      <option value="Outro">Outro</option>
+    </select>
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p id="resposta"></p>
+
+  <!-- Botões para gerar relatórios -->
+  <div class="relatorios">
+    <h2>Gerar Relatórios</h2>
+    <button onclick="window.open('http://localhost:5000/relatorio/pdf', '_blank')">📄 Gerar PDF</button>
+    <button onclick="window.open('http://localhost:5000/relatorio/csv', '_blank')">📊 Gerar CSV</button>
+  </div>
+</main>
+
+  <!-- Rodapé -->
+  <footer class="rodape"></footer>
+
+   <!-- Scripts -->
+  <script src="js/script1.js"></script>
+</body>
+</html>

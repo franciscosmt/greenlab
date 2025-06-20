@@ -1,0 +1,331 @@
+/* === VARIÁVEIS DE CORES === */
+:root {
+  --cor-fundo-pagina: #e8f5e9;
+  --cor-texto-padrao: #2e7d32;
+  --cor-branco: #ffffff;
+  --cor-verde-escuro: #2e7d32;
+  --cor-verde-hover: #07580b;
+  --cor-sombra-verde: rgba(0, 128, 0, 0.2);
+  --cor-cinza-borda: #ccc;
+  --cor-texto-secundario: #333;
+  --cor-alerta: red;
+}
+
+/* === RESET E CONFIGURAÇÕES GERAIS === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background: var(--cor-fundo-pagina);
+  color: var(--cor-texto-padrao);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
+/* === TIPOGRAFIA E TÍTULOS === */
+h1 {
+  text-align: center;
+}
+main.container-full p {
+  margin-bottom: 1.2em;
+}
+
+/* === CONTAINERS === */
+.container,
+.container-full {
+  padding: 2rem;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.container-full {
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.container.p {
+  font-size: 1.2rem;
+}
+
+/* === BARRA DE NAVEGAÇÃO === */
+.navbar {
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-branco);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo,
+.menu a {
+  color: var(--cor-branco);
+  text-decoration: none;
+}
+.logo {
+  font-weight: bold;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+.menu a {
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+.menu a:hover {
+  background-color: #1b5e20;
+  border-radius: 5px;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--cor-branco);
+  cursor: pointer;
+}
+
+/* === DROPDOWN (SUBMENU) === */
+.navbar .menu li {
+  position: relative;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--cor-verde-escuro);
+  padding: 0;
+  list-style: none;
+  border-radius: 5px;
+  z-index: 1000;
+  min-width: 220px;
+}
+.submenu li a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--cor-branco);
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.submenu li a:hover {
+  background-color: #1b5e20;
+}
+.menu li.dropdown:hover .submenu {
+  display: block;
+}
+
+/* === SENSORES E CARTÕES === */
+.sensors {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.card {
+  background: var(--cor-branco);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--cor-sombra-verde);
+  padding: 1.5rem;
+  text-align: center;
+  width: 200px;
+  margin: 1rem;
+}
+
+/* === BOTÃO DE IRRIGAÇÃO === */
+.irrigation {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+#toggle,
+form button {
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#toggle:hover,
+form button:hover {
+  background-color: var(--cor-verde-hover);
+}
+.irrigacao-ligada {
+  animation: piscar-vermelho 2s infinite;
+  font-weight: bold;
+}
+
+/* === ANIMAÇÃO DE ALERTA === */
+@keyframes piscar-vermelho {
+  0%, 100% { color: var(--cor-alerta); }
+  50% { color: transparent; }
+}
+
+/* === CARTÃO HORIZONTAL COM IMAGEM === */
+.card-horizontal {
+  display: flex;
+  background: var(--cor-branco);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--cor-sombra-verde);
+  margin: 1rem 0;
+  align-items: center;
+  padding: 1rem;
+}
+.card-horizontal img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--cor-texto-padrao);
+  margin-right: 1rem;
+}
+.card-horizontal .info {
+  padding-left: 0.5rem;
+}
+.card-horizontal h2 {
+  margin-bottom: 0.5rem;
+  color: var(--cor-texto-padrao);
+}
+.card-horizontal p {
+  margin: 0;
+  color: var(--cor-texto-secundario);
+}
+
+/* === FORMULÁRIOS === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+form input,
+form select,
+form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--cor-cinza-borda);
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* === RELATÓRIOS === */
+.relatorios {
+  margin-top: 30px;
+}
+.relatorios button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.relatorios button:hover {
+  background-color: #218838;
+}
+
+/* === IMAGENS E FIGURAS === */
+.img-container {
+  text-align: center;
+  color: var(--cor-verde-hover);
+  margin: 20px 0;
+}
+.img-horta {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+/* === MEDIA QUERY: Telas Pequenas === */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--cor-verde-escuro);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 5px;
+    padding: 0;
+    z-index: 999;
+  }
+  .menu.show {
+    display: flex;
+  }
+  .menu li {
+    width: 100%;
+    margin: 0;
+    position: relative;
+  }
+  .menu li a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    color: var(--cor-branco);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--cor-verde-escuro);
+    border-bottom: 1px solid #1b5e20;
+    transition: background-color 0.3s ease;
+  }
+  .menu li a:hover {
+    background-color: var(--cor-verde-hover);
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  /* SUBMENU no MOBILE */
+  .menu .dropdown .submenu {
+    top: 0;
+    left: -200px;
+    width: 200px;
+    flex-direction: column;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  .menu .dropdown:hover .submenu,
+  .menu .dropdown:focus-within .submenu {
+    display: flex;
+  }
+  .menu .submenu li a {
+    padding: 15px;
+    background-color: var(--cor-verde-escuro);
+    border-bottom: 1px solid #1b5e20;
+  }
+  .menu .submenu li a:hover {
+    background-color: var(--cor-verde-hover);
+  }
+}
+
+/* === RODAPÉ FIXO === */
+.rodape::after {
+  content: "©2025 Desenvolvido por alunos do Ceti Dona Rosaura Muniz Barreto, sob orientação do Professor Francisco Alves.";
+  text-align: center;
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-branco);
+  font-size: 18px;
+  padding: 10px 0;
+  display: block;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1000;
+}

@@ -1,0 +1,103 @@
+<!-- Estrutura básica do HTML e link com o CSS -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenLab | Horta Automatizada</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+  <!-- Menu de Navegação -->
+   <nav class="navbar">
+    <h2><a href="index.html" class="logo">🌿 GreenLab 🌿</a></h2>
+    <button class="menu-toggle">☰</button>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">Informações</a>
+        <ul class="submenu">
+          <li><a href="horta.html">Sobre a Horta</a></li>
+          <li><a href="sistema.html">Sobre o Sistema</a></li>
+          <li><a href="formulario.html">Formulário de Cadastro</a></li>
+          <li><a href="pessoas.html">Pessoas Envolvidas</a></li> 
+        </ul>
+      </li>
+      <li><a href="equipe.html">Equipe de Projeto</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+ 
+  <!-- Conteúdo Principal -->
+  <main class="container-full">
+  <h1>Sobre o Sistema</h1>
+
+  <section>
+    <p>
+      O sistema de Horta Automatizada foi desenvolvido para tornar o cultivo mais eficiente, inteligente e sustentável.
+      Ele utiliza sensores integrados que monitoram em tempo real quatro fatores cruciais para a saúde das plantas.
+      Abaixo, explicamos como cada componente contribui para o controle do ambiente da horta.
+    </p>
+
+    <figure class="img-container">
+      <img src="img/esp32.jpg" alt="Placa ESP32" class="img-horta"/>
+      <figcaption>Placa ESP32, o cérebro do sistema de automação.</figcaption>
+    </figure>
+    <p>
+      🧠 <strong>Placa ESP32:</strong> A ESP32 é uma microcontroladora com conectividade Wi-Fi e Bluetooth. 
+      Ela atua como o cérebro do sistema, recebendo dados de todos os sensores (umidade, temperatura e luminosidade), 
+      processando essas informações e enviando-as para o sistema web. Além disso, é responsável por acionar a irrigação 
+      de forma automática ou conforme o comando manual do usuário por meio da interface digital.
+    </p>
+
+    <figure class="img-container">
+      <img src="img/umidade-solo.jpg" alt="Sensor de Umidade do Solo" class="img-horta"/>
+      <figcaption>Sensor de umidade do solo instalado em canteiro.</figcaption>
+    </figure>
+    <p>
+      🌱 <strong>Umidade do Solo:</strong> O sensor de umidade mede constantemente a quantidade de água presente no solo. 
+      Isso permite garantir que as plantas recebam a irrigação ideal, evitando o ressecamento das raízes ou o encharcamento, 
+      que pode causar apodrecimento. Quando o solo estiver seco, o sistema pode acionar a irrigação automaticamente.
+    </p>
+
+    <figure class="img-container">
+      <img src="img/temperatura.jpg" alt="Sensor de Temperatura" class="img-horta"/>
+      <figcaption>Sensor de temperatura monitorando o ambiente.</figcaption>
+    </figure>
+    <p>
+      🌡️ <strong>Temperatura Ambiente:</strong> Este sensor monitora a temperatura do ambiente onde está localizada a horta. 
+      Com essas informações, é possível tomar decisões como proteger as plantas de temperaturas extremas com coberturas ou 
+      ajustar a irrigação em dias mais quentes ou frios.
+    </p>
+
+    <figure class="img-container">
+      <img src="img/luminosidade.jpg" alt="Sensor de Luminosidade" class="img-horta"/>
+      <figcaption>Sensor de luminosidade avaliando a luz solar.</figcaption>
+    </figure>
+    <p>
+      ☀️ <strong>Luminosidade:</strong> Através deste sensor, o sistema analisa a intensidade da luz solar recebida pelas plantas. 
+      Essa informação é fundamental para garantir a fotossíntese adequada. Em casos de baixa luminosidade, o usuário pode 
+      optar por mover a horta ou complementar com iluminação artificial.
+    </p>
+
+    <p>
+      Todos os dados captados pelos sensores são enviados automaticamente para a placa ESP32, que os processa e transmite ao sistema. 
+      A partir disso, o controle da irrigação pode ser feito de forma automática, conforme os níveis detectados, ou manual, 
+      através de uma interface digital acessível ao usuário.
+    </p>
+
+    <p>
+      Essa automação permite uma economia significativa de água, favorece o desenvolvimento saudável das plantas e reduz o tempo de 
+      manejo manual, promovendo um cultivo mais eficiente e sustentável.
+    </p>
+  </section>
+</main>
+
+  <!-- Rodapé -->
+  <footer class="rodape"></footer>
+
+   <!-- Scripts -->
+  <script src="js/script1.js"></script>
+</body>
+</html>

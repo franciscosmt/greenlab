@@ -1,0 +1,55 @@
+<!-- Estrutura básica do HTML e link com o CSS -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenLab | Horta Automatizada</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Menu de Navegação -->
+   <nav class="navbar">
+    <h2><a href="index.html" class="logo">🌿 GreenLab 🌿</a></h2>
+    <button class="menu-toggle">☰</button>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">Informações</a>
+        <ul class="submenu">
+          <li><a href="horta.html">Sobre a Horta</a></li>
+          <li><a href="sistema.html">Sobre o Sistema</a></li>
+          <li><a href="formulario.html">Formulário de Cadastro</a></li>
+          <li><a href="pessoas.html">Pessoas Envolvidas</a></li> 
+        </ul>
+      </li>
+      <li><a href="equipe.html">Equipe de Projeto</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <h1>Horta Automatizada</h1>
+    <section class="sensors">
+      <div class="card"><h2>🌱 Umidade</h2><p id="soil">--%</p></div>
+      <div class="card"><h2>🌡️ Temperatura</h2><p id="temperature">--°C</p></div>
+      <div class="card"><h2>☀️ Luminosidade</h2><p id="light">--</p></div>
+    </section>
+    
+    <section class="irrigation">
+      <h2>Irrigação: <span id="status">Desligada</span></h2>
+      <button id="toggle">Ligar o Sistema</button>
+    </section>
+  </main>
+
+    <!-- Rodapé -->
+     <footer class="rodape"></footer>
+
+   <!-- Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+  <script src="js/script1.js"></script>
+</body>
+</html>
