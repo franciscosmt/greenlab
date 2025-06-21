@@ -318,7 +318,7 @@ form textarea {
 
 /* === RODAPÉ FIXO === */
 .rodape::after {
-  content: "©2025 Desenvolvido por alunos do Ceti Dona Rosaura Muniz Barreto, sob orientação do Professor Francisco Alves.";
+  content: "©2025 Desenvolvido por alunos do Ceti Dona Rosaura Muniz Barreto - São Miguel do Tapuio - Piauí.";
   text-align: center;
   background-color: var(--cor-verde-escuro);
   color: var(--cor-branco);
